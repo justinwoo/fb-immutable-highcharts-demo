@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta charset="utf8">
+    <link rel="stylesheet" href="vendor/jquery-ui.css">
+    <script src="vendor/jquery-1.10.2.js"></script>
+    <script src="vendor/jquery-ui.js"></script>
+    <script src="vendor/highcharts.js"></script>
+  </head>
+  <body>
+    <div id="resizable" class="ui-widget-content">
+      <div id="example" class="resizable"></div>
+    </div>
+    <button id="newChartObject">New Chart Object</button>
+    <script src="dist/main.js"></script>
+    <script>
+      $(function() {
+        $('#resizable').resizable({
+          stop: function() {
+            var newHeight = $(this).height();
+            var newWidth = $(this).width();
+            console.log('newHeight:', newHeight);
+            console.log('newWidth:', newWidth);
+            chart.setProps({
+              height: newHeight,
+              width: newWidth
+            });
+          }
+        });
+        $('#newChartObject').click(function () {
+          var newChartObject = getNewChartObject();
+          chart.setProps({
+            chart: newChartObject
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

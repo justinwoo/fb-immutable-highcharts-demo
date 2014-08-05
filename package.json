@@ -1,0 +1,19 @@
+{
+  "name": "fb-immutable-highcharts-demo",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Justin Woo",
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "^1.3.8",
+    "immutable": "^2.0.3",
+    "jsx-loader": "^0.11.0",
+    "qunitjs": "^1.14.0",
+    "react": "^0.11.1",
+    "webpack": "^1.3.3-beta1"
+  }
+}
